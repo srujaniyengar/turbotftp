@@ -9,7 +9,7 @@ enum op_code{
   RREQ =1, //read req
   WREQ=2,  //write req
   DATA=3, //data
-  ACK=4,
+  ACK=4,  //acknowledge
   ERROR=5 //err
 };
 
