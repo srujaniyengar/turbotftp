@@ -9,7 +9,8 @@ enum op_code{
   RREQ =1, //read req
   WREQ=2,  //write req
   DATA=3, //data
-  ERROR=4 //err
+  ACK=4,
+  ERROR=5 //err
 };
 
 typedef struct Packet{
