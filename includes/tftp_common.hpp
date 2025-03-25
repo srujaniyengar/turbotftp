@@ -14,3 +14,4 @@ inline uint16_t to_host_order(uint_16t val){
 inline bool valid_mode(const std::string mode){
   return(mode=="netascii" || mode="octet");//octet fot .bin files netascii for .txt files
 }
+#endif 
