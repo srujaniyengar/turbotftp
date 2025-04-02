@@ -1,14 +1,20 @@
-# TurboTFTP - High-Performance TFTP Client & Server
+# turboTFTP - High-Performance TFTP Client & Server
 
-TurboTFTP is a lightweight and efficient Trivial File Transfer Protocol (TFTP) featured in C++ based on RFC 1350. It supports fast and reliable file transfers over UDP with RRQ (Read Request) and WRQ (Write Request) handling.
-Features
+ TurboTFTP is a lightweight and efficient Trivial File Transfer Protocol (TFTP) implementation in C++ based on RFC 1350. It supports fast and reliable file transfers over UDP with RRQ (Read Request) and WRQ (Write Request) handling.
 
-- ✔ High-speed file transfers over UDP
-- ✔ Supports file upload (WRQ) and download (RRQ)
-- ✔ Implements 512-byte data packets with ACK handling
-- ✔ Supports octet (binary) and netascii (text) modes
-- ✔ Handles timeouts and retransmissions
-- ✔ Lightweight and easy to integrate
+## Features
+
+-✔ High-speed file transfers over UDP
+
+-✔ Supports file upload (WRQ) and download (RRQ)
+
+-✔ Implements 512-byte data packets with ACK handling
+
+-✔ Supports octet (binary) and netascii (text) modes
+
+-✔ Handles timeouts and retransmissions
+
+-✔ Lightweight and easy to integrate
 
 ## File Structure
 ```
@@ -16,8 +22,6 @@ Features
 │── 📂 src
 │   ├── tftp_server.cpp   # Server implementation
 │   ├── tftp_client.cpp   # Client implementation
-│   ├── main_server.cpp   # Entry point for server
-│   ├── main_client.cpp   # Entry point for client
 │── 📂 include
 │   ├── tftp_server.hpp   # Server class definition
 │   ├── tftp_client.hpp   # Client class definition
@@ -25,25 +29,28 @@ Features
 │   ├── tftp_common.h     # Utility functions
 │── 📂 data
 │   ├── test.txt          # Sample file for testing
-│── 📂 build              # Compiled binaries
-│── Makefile              # Build automation
 │── README.md             # Documentation
 ```
-
 ## Build & Run
-🔹 Build the Project
-```bash
-make
+
+🔹 Compile the Server (C++17 required)
+```cpp
+g++ src/tftp_server.cpp -o tftp_server -std=c++17 -lstdc++fs -pthread
 ```
-🔹 Start the Server
-```bash
-./build/tftp_server
+🔹 Compile the Client (C++17 required for filesystem)
+```
+g++ src/tftp_client.cpp -o tftp_client -std=c++17
+```
+🔹 Run the Server
+```
+./tftp_server
 ```
 🔹 Send a File (WRQ)
-```make
-./build/tftp_client --write file.txt
+```
+./tftp_client <server> put <destination_file> <source_file>
 ```
 🔹 Request a File (RRQ)
-```make
-./build/tftp_client --read file.txt
 ```
+./tftp_client <server> get <source_file> <destination_file>
+```
+
