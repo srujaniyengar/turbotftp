@@ -16,21 +16,6 @@
 
 -✔ Lightweight and easy to integrate
 
-## File Structure
-```
-📂 turboTFTP
-│── 📂 src
-│   ├── tftp_server.cpp   # Server implementation
-│   ├── tftp_client.cpp   # Client implementation
-│── 📂 include
-│   ├── tftp_server.hpp   # Server class definition
-│   ├── tftp_client.hpp   # Client class definition
-│   ├── protocol.h        # TFTP packet structure
-│   ├── tftp_common.h     # Utility functions
-│── 📂 data
-│   ├── test.txt          # Sample file for testing
-│── README.md             # Documentation
-```
 ## Build & Run
 
 🔹 Compile the Server (C++17 required)
