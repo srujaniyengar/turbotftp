@@ -53,4 +53,19 @@ g++ src/tftp_client.cpp -o tftp_client -std=c++17
 ```
 ./tftp_client <server> get <source_file> <destination_file>
 ```
+### Contribution 
+🤝 Contribution
+
+We welcome contributions to turboTFTP! Whether it's fixing bugs, optimizing performance, or adding new features, your input is appreciated.
+Steps to Contribute:
+
+   -Fork the repository
+
+   -Create a new branch: git checkout -b feature-name
+
+   -Commit your changes: git commit -m "Add feature"
+
+   -Push to your fork: git push origin feature-name
+
+   -Submit a Pull Request
 
